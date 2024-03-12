@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  background: #002339;
+  color: #fff;
+}
+
+.container {
+  margin: 8%;
+  width: 90%;
+  max-width: 700px;
+}
+.display {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  background: #fff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 20px;
+  border-radius: 5px;
+}
+
+.display input {
+  width: 100%;
+}
+
+.container h1 {
+  font-weight: 500;
+  font-size: 45px;
+}
+
+.display img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.display input {
+  border: 0;
+  outline: 0;
+  font-size: 24px;
+}
+
+.container button img {
+  width: 28px;
+  margin-right: 10px;
+}
+
+.container button {
+  border: 0;
+  outline: 0;
+  background: #019f55;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 26px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* スライドバー */
+
+.container input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  width: 50%;
+}
+
+.row {
+  display: flex;
+  margin-block: 8px;
+}
+
+.row #sliderValue {
+  margin-left: 30px;
+}
+
+/* バーデザイン */
+.container input[type="range"]::-webkit-slider-runnable-track {
+  background: #fff;
+  height: 8px;
+  border-radius: 8px;
+}
+
+/* つまみデザイン */
+.container input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  margin-top: -6px;
+  background-color: #019f55;
+  border-radius: 50%;
+}
+
+/* チェックボックス */
+form {
+  font-size: 24px;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+form ul {
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 2px;
+  > * {
+    flex: 1;
+  }
+}
+
+form ul li input {
+  margin-right: 10px;
+}
+
+form input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
