@@ -53,22 +53,18 @@
           i++;
         }
         return genPassword;
-      }
-      /* function createPassword() {
-        let password = "";
-        password += upperChars[Math.floor(Math.random() * upperChars.length)];
-        password += lowerChars[Math.floor(Math.random() * lowerChars.length)];
-        password += allNumbers[Math.floor(Math.random() * allNumbers.length)];
-        password += allSymbols[Math.floor(Math.random() * allSymbols.length)];
-
-        while (length > password.length) {
-          password += allChars[Math.floor(Math.random() * allChars.length)];
-        }
-        passwordBox.value = password;
-      } */
+      }  
 
       // コピーボタン
-      function copyPassword() {
-        passwordBox.select();
-        document.execCommand("copy");
-      }
+      copyIcon.addEventListener("click", () => {
+        if (passBox.value != "" || passBox.value.length >= 1) {
+          navigator.clipboard.writeText(passBox.value);
+          copyIcon.innerText = "check";
+          copyIcon.title = "Paassword Copied!";
+
+          setTimeout(() => {
+            copyIcon.innerHTML = "content_copy";
+            copyIcon.title = "";
+          }, 1000);
+        }
+      });
