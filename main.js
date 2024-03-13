@@ -1,6 +1,6 @@
       /* パスワードジェネレーター */
       let passBox = document.getElementById("passBox");
-      /* const length = 12; */
+      
       let upperCase = document.getElementById("upperCase");
       let lowerCase = document.getElementById("lowerCase");
       let number = document.getElementById("number");
@@ -14,8 +14,7 @@
       const allNumbers = "0123456789";
       const allSymbols = "@#$^&*()_+~|{}[],./-=";
 
-/*       const allChars = upperChars + lowerChars + allNumbers + allSymbols;
- */
+
       // スライダー
       sliderValue.textContent = inputSlider.value;
       inputSlider.addEventListener("input", () => {

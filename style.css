@@ -7,25 +7,31 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #002339;
+  --main-color: #fff;
+  --second-color: #019f55;
+}
+
 ul li {
   list-style: none;
 }
 
 body {
-  background: #002339;
-  color: #fff;
+  background: var(--bg-color);
+  color: var(--main-color);
 }
 
 .container {
-  margin: 8%;
+  margin: 5%;
   width: 90%;
   max-width: 700px;
 }
 .display {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-bottom: 30px;
-  background: #fff;
+  background: var(--main-color);
   color: #333;
   display: flex;
   align-items: center;
@@ -50,21 +56,16 @@ body {
 }
 
 .display span {
-  color: #019f55;
+  color: var(--second-color);
   cursor: pointer;
   font-size: 30px;
-}
-
-.container button img {
-  width: 28px;
-  margin-right: 10px;
 }
 
 .container button {
   border: 0;
   outline: 0;
-  background: #019f55;
-  color: #fff;
+  background: var(--second-color);
+  color: var(--main-color);
   font-size: 22px;
   font-weight: 300;
   display: flex;
@@ -102,7 +103,7 @@ body {
 
 /* バーデザイン */
 .container input[type="range"]::-webkit-slider-runnable-track {
-  background: #fff;
+  background: var(--main-color);
   height: 8px;
   border-radius: 8px;
 }
@@ -140,7 +141,59 @@ form ul li input {
   margin-right: 10px;
 }
 
+form ul li input,
+label {
+  cursor: pointer;
+}
+
 form input[type="checkbox"] {
+  position: relative;
   width: 20px;
   height: 20px;
+  background-color: var(--main-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+form input[type="checkbox"]:checked:before {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  transform: rotate(50deg);
+  width: 4px;
+  height: 8px;
+  border-right: 3px solid var(--second-color);
+  border-bottom: 3px solid var(--second-color);
+  content: "";
+}
+
+/* レスポンシブ */
+@media (max-width: 520px) {
+  .container {
+    margin: 5%;
+    width: 90%;
+  }
+  .display {
+    margin-top: 20px;
+    padding: 10px 20px;
+  }
+  .display input {
+    font-size: 16px;
+  }
+  .display span {
+    display: none;
+  }
+  .container input[type="range"] {
+    width: 80%;
+  }
+  form ul {
+    display: inline-block;
+  }
+  form ul li {
+    margin-top: 20px;
+  }
+  .container button {
+    margin-top: 200px;
+  }
 }
